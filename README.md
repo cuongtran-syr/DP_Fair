@@ -1,2 +1,2 @@
 # DP_Fair
-Codes to implement private fair models
+All source codes to implement private fair models
