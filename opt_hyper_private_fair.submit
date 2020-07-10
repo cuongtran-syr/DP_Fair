@@ -1,0 +1,14 @@
+############
+#
+# Example submit file for vanilla job
+#
+############
+getenv = True
+request_cpus = 1
+Universe       = vanilla
+Executable     = private_fair_models_hyper_opt.sh
+Arguments      = $(x) $(s) $(c)
+input   = /dev/null
+output  = run_opt_hyper_private_fair_model.out
+error   = run_opt_hyper_private_fair_model.error
+Queue x,s,c from private_fair_models_hyper_opt.in

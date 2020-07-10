@@ -1,0 +1,14 @@
+############
+#
+# Example submit file for vanilla job
+#
+############
+getenv = True
+request_cpus = 1
+Universe       = vanilla
+Executable     = run.sh
+Arguments      = $(x) $(s) $(d)
+input   = /dev/null
+output  = run_condor.out
+error   = run_condor.error
+Queue x,s,d from run.in

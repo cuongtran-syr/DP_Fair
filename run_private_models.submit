@@ -1,0 +1,14 @@
+############
+#
+# Example submit file for vanilla job
+#
+############
+getenv = True
+request_cpus = 1
+Universe       = vanilla
+Executable     = private_models.sh
+Arguments      = $(x) $(s)
+input   = /dev/null
+output  = run_private_model.out
+error   = run_private_model.error
+Queue x,s from private_models.in

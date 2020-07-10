@@ -1,0 +1,15 @@
+############
+#
+# Example submit file for vanilla job
+#
+############
+getenv = True
+request_cpus = 1
+Universe       = vanilla
+Executable     = cn_fair_models.sh
+Arguments      = $(x)  $(f) $(s)
+input   = /dev/null
+output  = run_cn_fair_models.out
+error   = run_cn_fair_models.error
+Queue x,f,s from cn_fair_models.in
+

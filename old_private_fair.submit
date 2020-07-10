@@ -1,0 +1,14 @@
+############
+#
+# Example submit file for vanilla job
+#
+############
+getenv = True
+request_cpus = 1
+Universe       = vanilla
+Executable     = old_private_fair.sh
+Arguments      = $(x) $(s) $(c) $(m)
+input   = /dev/null
+output  = run_old_private_fair.out
+error   = run_old_private_fair.error
+Queue x,s,c,m from old_private_fair.in

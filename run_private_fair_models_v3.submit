@@ -1,0 +1,14 @@
+############
+#
+# Example submit file for vanilla job
+#
+############
+getenv = True
+request_cpus = 1
+Universe       = vanilla
+Executable     = private_fair_models_v3.sh
+Arguments      = $(x) $(f) $(s) $(c) $(m)
+input   = /dev/null
+output  = run_private_fair_model_v3.out
+error   = run_private_fair_model_v3.error
+Queue x,f,s,c,m from private_fair_models.in

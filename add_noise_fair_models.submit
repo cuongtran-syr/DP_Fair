@@ -1,0 +1,14 @@
+############
+#
+# Example submit file for vanilla job
+#
+############
+getenv = True
+request_cpus = 1
+Universe       = vanilla
+Executable     = add_noise_fair_models.sh
+Arguments      = $(x) $(s) $(c)
+input   = /dev/null
+output  = run_add_noise.out
+error   = run_add_noise.error
+Queue x,s,c from add_noise_fair_models.in
